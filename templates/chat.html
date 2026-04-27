@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NeuroLearn AI – Ask the AI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner container">
+      <a href="/" class="logo">Neuro<span>Learn</span></a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/input">Get Recommendations</a></li>
+        <li><a href="/chat" class="active">Ask AI</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="chat-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="chat-sidebar">
+      <div class="chat-sidebar-inner">
+        <h3>NeuroLearn Chat</h3>
+        <p class="sidebar-desc">Powered by RAG – I answer questions using your uploaded documents.</p>
+
+        <div class="sidebar-section">
+          <h4>Quick Questions</h4>
+          <ul class="quick-questions">
+            <li><button class="quick-btn">Summarise key concepts</button></li>
+            <li><button class="quick-btn">Important topics to study</button></li>
+            <li><button class="quick-btn">Practice questions</button></li>
+            <li><button class="quick-btn">Simplify a concept</button></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-section">
+          <h4>Uploaded Docs</h4>
+          <div id="doc-list" class="doc-list">
+            <p class="no-docs">No documents uploaded yet.</p>
+            <a href="/input" class="btn btn-outline btn-sm" style="margin-top:0.5rem">Upload PDF</a>
+          </div>
+        </div>
+
+        <button class="btn btn-outline btn-sm clear-btn" id="clear-chat">Clear Chat</button>
+      </div>
+    </aside>
+
+    <!-- MAIN CHAT -->
+    <main class="chat-main">
+      <div class="chat-messages" id="chat-messages">
+
+        <!-- Welcome message (static placeholder) -->
+        <div class="message ai-message">
+          <div class="message-avatar">🤖</div>
+          <div class="message-bubble">
+            <p>Hi! I'm your NeuroLearn AI assistant. I can answer questions about your uploaded study materials, help you understand difficult concepts, and generate practice questions.</p>
+            <p style="margin-top:0.5rem">What would you like to know?</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- INPUT AREA (static form - no live API calls) -->
+      <div class="chat-input-area">
+        <div class="chat-input-inner">
+          <textarea
+            id="chat-input"
+            placeholder="Ask a question about your study materials…"
+            rows="1"
+            maxlength="2000"
+          ></textarea>
+          <button id="send-btn" class="send-btn" title="Send">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </div>
+        <p class="input-hint">Answers are generated from your uploaded documents using semantic search.</p>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
