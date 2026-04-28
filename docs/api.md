@@ -1,21 +1,16 @@
 # API Structure
 
-## Auth
-POST /api/auth/register  
-POST /api/auth/login  
+## Resource Upload
+POST /api/upload
 
-## Products
-GET /api/products  
-GET /api/products/:id  
+## Recommendation System
+POST /api/recommend
 
-## Cart
-POST /api/cart  
-GET /api/cart/:userId  
+## AI Q&A
+POST /api/ask
 
-## Recommendations
-GET /api/recommendations/:userId  
+## YouTube Search
+GET /api/youtube?q=keyword
 
-## Admin
-POST /api/products  
-PUT /api/products/:id  
-DELETE /api/products/:id  
+## Health Check
+GET /api/
