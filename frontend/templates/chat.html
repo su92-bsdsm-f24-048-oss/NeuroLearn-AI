@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NeuroLearn AI – Ask the AI</title>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <link rel="stylesheet" href="../static/style.css" />
 </head>
 <body>
 
@@ -13,9 +13,9 @@
     <div class="nav-inner container">
       <a href="/" class="logo">Neuro<span>Learn</span></a>
       <ul class="nav-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/input">Get Recommendations</a></li>
-        <li><a href="/chat" class="active">Ask AI</a></li>
+        <li><a href="/frontend/templates/home.html">Home</a></li>
+        <li><a href="/frontend/templates/recommendations.html">Get Recommendations</a></li>
+        <li><a href="/frontend/templates/chat.html" class="active">Ask AI</a></li>
       </ul>
     </div>
   </nav>
@@ -42,7 +42,7 @@
           <h4>Uploaded Docs</h4>
           <div id="doc-list" class="doc-list">
             <p class="no-docs">No documents uploaded yet.</p>
-            <a href="/input" class="btn btn-outline btn-sm" style="margin-top:0.5rem">Upload PDF</a>
+            <a href="/frontend/templates/input.html" class="btn btn-outline btn-sm" style="margin-top:0.5rem">Upload PDF</a>
           </div>
         </div>
 

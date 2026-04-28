@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NeuroLearn AI – Smart Study Recommendations</title>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <link rel="stylesheet" href="../static/style.css" />
 </head>
 <body>
 
@@ -14,9 +14,9 @@
     <div class="nav-inner container">
       <a href="/" class="logo">Neuro<span>Learn</span></a>
       <ul class="nav-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/input">Get Recommendations</a></li>
-        <li><a href="/chat">Ask AI</a></li>
+        <li><a href="/frontend/templates/home.html">Home</a></li>
+        <li><a href="/frontend/templates/recommendations.html">Get Recommendations</a></li>
+        <li><a href="/frontend/templates/chat.html">Ask AI</a></li>
       </ul>
     </div>
   </nav>
@@ -29,8 +29,8 @@
       <h1>Study Smarter.<br/><span class="accent">Not Harder.</span></h1>
       <p class="hero-sub">NeuroLearn AI analyses your learning style, goals, and knowledge gaps to deliver hyper-personalised study plans, video resources, and instant AI support.</p>
       <div class="hero-btns">
-        <a href="/input" class="btn btn-primary">Get My Study Plan</a>
-        <a href="/chat" class="btn btn-outline">Ask the AI →</a>
+        <a href="/frontend/templates/input.html" class="btn btn-primary">Get My Study Plan</a>
+        <a href="/frontend/templates/chat.html" class="btn btn-outline">Ask the AI →</a>
       </div>
       <div class="hero-stats">
         <div class="stat"><span class="stat-num">3</span><span class="stat-label">Core Modules</span></div>
