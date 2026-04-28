@@ -1,28 +1,27 @@
 # Data Flow
 
-1. User interacts with frontend (React)
+1. User interacts with frontend (HTML/CSS/JS)
 
-2. Frontend sends request to backend (Node.js)
+2. Frontend sends request to backend (Flask API)
 
-3. Backend processes the request:
-   - Authentication (login/register)
-   - Fetch products
-   - Manage cart
+3. Backend processes request:
 
-4. Backend communicates with database (MongoDB)
+   - /api/upload:
+     Stores resource in database
 
-5. Database returns data to backend
+   - /api/recommend:
+     Uses ML model (TF-IDF + cosine similarity)
+
+   - /api/ask:
+     Returns AI-based response
+
+   - /api/youtube:
+     Returns video links
+
+4. Database (SQLite) stores resources
+
+5. ML model generates recommendations
 
 6. Backend sends response to frontend
 
-7. Frontend displays data to user
-
-## Recommendation Flow
-
-1. Backend sends user data to ML model (Python)
-
-2. ML model generates product recommendations
-
-3. Backend receives recommendations
-
-4. Backend sends recommendations to frontend
+7. Frontend displays results
